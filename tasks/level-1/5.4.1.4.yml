@@ -41,6 +41,7 @@
   with_items:
     - "{{ egrep_5_4_1_4.stdout_lines|default([]) }}"
   changed_when: false
+  when: "'root' not in item"
   tags:
     - level-1
     - section-5
